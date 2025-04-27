@@ -1,0 +1,115 @@
+{
+  "constraints": [
+    {
+      "class": "constraint_gtvalue",
+      "weight": 1.0,
+      "domain": [[[0.001, 20], [0.001, 20]]],
+      "nbOfSamples": 50,
+      "args": {
+        "test_value": 0.0
+      }
+    },
+    
+    {
+      "class": "constraint_gtvalue",
+      "weight": 1.0,
+      "domain": [[[20.0, 40], [20.0, 40]]],
+      "nbOfSamples": 50,
+      "args": {
+        "test_value": 3.0
+      }
+    },
+    
+    {
+      "class": "constraint_increasing",
+      "weight": 1.0,
+      "domain": [[[0.001, 40], [0.001, 40]]],
+      "nbOfSamples": 50,
+      "args": {
+        "eps": 1e-4, 
+        "var": 1
+      }
+    },
+    
+    {
+      "class": "constraint_decreasing",
+      "weight": 1.0,
+      "domain": [[[0.001, 40], [0.001, 40]]],
+      "nbOfSamples": 50,
+      "args": {
+        "eps": 1e-4, 
+        "var": 0
+      }
+    },
+    
+    {
+      "class": "constraint_exactvalue",
+      "weight": 1.0,
+      "domain": [[[0, 0], [0, 40]], [[0, 40], [0, 0]]],
+      "nbOfSamples": 10,
+      "args": {
+        "value": 0,
+        "forbidden": "[0,0]; [22,0]; [0,*]"
+      }
+    },
+    
+    {
+      "class": "constraint_resistors_diagonal",
+      "weight": 1.0,
+      "domain": [[[0.001, 10], [0.001, 10]], [[20.0, 30], [20.0, 30]]],
+      "nbOfSamples": 50,
+      "args": {}
+    },
+    
+    {
+      "class": "constraint_resistors_ltinput",
+      "weight": 1.0,
+      "domain": [[[0.001, 10], [0.001, 10]], [[20.0, 30], [30.0, 40]]],
+      "nbOfSamples": 50,
+      "args": {}
+    },
+    
+    {
+      "class": "constraint_symmetry2vars",
+      "weight": 1.0,
+      "domain": [[[0.001, 40], [0.001, 40]]],
+      "nbOfSamples": 50,
+      "args": {
+        "vars": [0,1]
+      }
+    },
+    
+    {
+      "class": "constraint_invariant",
+      "weight": 1.0,
+      "domain": [[[-6.0, 6.0], [-6.283185307179586, 6.283185307179586]], 
+                 [[-3.0, 3.0], [-3.283185307179586, 3.283185307179586]]],
+      "nbOfSamples": 50,
+      "args": {
+        "var": 0
+      }
+    },
+    
+    {
+      "class": "constraint_decreasing_positive_second_derivative",
+      "weight": 1.0,
+      "domain": [[[0.001, 40], [0.001, 40]]],
+      "nbOfSamples": 50,
+      "args": {
+        "eps": 1e-4, 
+        "var": 0
+      }
+    },
+    
+    {
+      "class": "constraint_concave_down",
+      "weight": 1.0,
+      "domain": [[[0.001, 40], [0.001, 40]]],
+      "nbOfSamples": 50,
+      "args": {
+        "eps": 1e-4, 
+        "var": 1
+      }
+    }
+  ]
+}

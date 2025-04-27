@@ -1,0 +1,54 @@
+{
+  "constraints": 
+  [
+    {
+      "class": "constraint_increasing",
+      "weight": 1.0,
+      "domain": [[[0.0, 0.04]]],
+      "nbOfSamples": 50,
+      "args": {
+        "eps": 1e-4, 
+        "var": 0
+      }
+    },
+    {
+      "class": "constraint_decreasing",
+      "weight": 1.0,
+      "domain": [[[0.3, 1.0]]],
+      "nbOfSamples": 50,
+      "args": {
+        "eps": 1e-4, 
+        "var": 0
+      }
+    },
+    {
+      "class": "constraint_decreasing_positive_second_derivative",
+      "weight": 1.0,
+      "domain": [[[0.3, 1.0]]],
+      "nbOfSamples": 50,
+      "args": {
+        "eps": 1e-4, 
+        "var": 0
+      }
+    },
+    {
+      "class": "constraint_concave_down",
+      "weight": 1.0,
+      "domain": [[[0.02, 0.1]]],
+      "nbOfSamples": 50,
+      "args": {
+        "eps": 1e-4, 
+        "var": 0
+      }
+    },
+    {
+      "class": "constraint_exactvalue",
+      "weight": 1.0,
+      "domain": [[[0.0, 0.0]]],
+      "nbOfSamples": 1,
+      "args": {
+        "value": 0.0
+      }
+    }
+  ]
+}

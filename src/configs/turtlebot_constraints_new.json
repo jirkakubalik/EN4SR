@@ -1,0 +1,94 @@
+{
+  "constraints": [
+    {
+      "class": "constraint_gtvalue",
+      "weight": 1.0,
+      "domain": [[[0.001, 20], [0.001, 20]]],
+      "nbOfSamples": 50,
+      "args": {
+        "test_value": 0.0
+      }
+    },
+    
+    {
+      "class": "constraint_gtvalue",
+      "weight": 1.0,
+      "domain": [[[20.0, 40], [20.0, 40]]],
+      "nbOfSamples": 50,
+      "args": {
+        "test_value": 3.0
+      }
+    },
+    
+    {
+      "class": "constraint_increasing",
+      "weight": 1.0,
+      "domain": [[[0.001, 40], [0.001, 40]]],
+      "nbOfSamples": 50,
+      "args": {
+        "eps": 1e-4, 
+        "variable_id": 1
+      }
+    },
+    
+    {
+      "class": "constraint_decreasing",
+      "weight": 1.0,
+      "domain": [[[0.001, 40], [0.001, 40]]],
+      "nbOfSamples": 50,
+      "args": {
+        "eps": 1e-4, 
+        "variable_id": 0
+      }
+    },
+    
+    {
+      "class": "constraint_exactvalue",
+      "weight": 1.0,
+      "domain": [[[0.0], [0.0]], [[10.0], [10.0]]],
+      "nbOfSamples": 2,
+      "args": {
+        "value": [0, 5]
+      }
+    },
+    
+    {
+      "class": "constraint_resistors_diagonal",
+      "weight": 1.0,
+      "domain": [[[0.001, 10], [0.001, 10]], [[20.0, 30], [20.0, 30]]],
+      "nbOfSamples": 50,
+      "args": {}
+    },
+    
+    {
+      "class": "constraint_resistors_ltinput",
+      "weight": 1.0,
+      "domain": [[[0.001, 10], [0.001, 10]], [[20.0, 30], [30.0, 40]]],
+      "nbOfSamples": 50,
+      "args": {}
+    },
+    
+    {
+      "class": "constraint_symmetry2vars",
+      "weight": 1.0,
+      "domain": [[[0.001, 40], [0.001, 40]]],
+      "nbOfSamples": 50,
+      "args": {
+        "vars": [0,1]
+      }
+    },
+    
+    {
+      "class": "constraint_invariant",
+      "weight": 1.0,
+      "domain": [[[-6.0, 6.0], [-6.0, 6.0], [-6.283185307179586, 6.283185307179586],  [0.0, 0.0],  [0.0, 0.0]], 
+                 [[-6.0, 6.0], [-6.0, 6.0], [-1.570796326794897, -1.570796326794897], [0.0, 0.3], [0.0, 0.0]],
+                 [[-6.0, 6.0], [-6.0, 6.0], [1.570796326794897, 1.570796326794897],   [0.0, 0.3], [0.0, 0.0]],
+                 [[-6.0, 6.0], [-6.0, 6.0], [-6.283185307179586, 6.283185307179586],  [0.0, 0.0],  [-1.0, 1.0]]],
+      "nbOfSamples": 200,
+      "args": {
+        "var": 0
+      }
+    }
+  ]
+}

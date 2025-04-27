@@ -1,0 +1,61 @@
+{
+  "constraints": 
+  [
+    {
+      "class": "constraint_increasing",
+      "weight": 1.0,
+      "domain": [[[-0.075, -0.02]], [[0.02, 0.075]]],
+      "nbOfSamples": 50,
+      "args": {
+        "eps": 1e-4, 
+        "var": 0
+      }
+    },
+    {
+      "class": "constraint_decreasing",
+      "weight": 1.0,
+      "domain": [[[-0.006, 0.006]]],
+      "nbOfSamples": 50,
+      "args": {
+        "eps": 1e-4, 
+        "var": 0
+      }
+    },
+    {
+      "class": "constraint_ltvalue",
+      "weight": 1.0,
+      "domain": [[[0.001, 0.075]]],
+      "nbOfSamples": 50,
+      "args": {
+        "test_value": 0.0
+      }
+    },
+    {
+      "class": "constraint_gtvalue",
+      "weight": 1.0,
+      "domain": [[[-0.075, -0.001]]],
+      "nbOfSamples": 50,
+      "args": {
+        "test_value": 0.0
+      }
+    },
+    {
+      "class": "constraint_exactvalue",
+      "weight": 1.0,
+      "domain": [[[0.06, 0.06]]],
+      "nbOfSamples": 1,
+      "args": {
+        "value": -0.001
+      }
+    },
+    {
+      "class": "constraint_exactvalue",
+      "weight": 1.0,
+      "domain": [[[-0.06, -0.06]]],
+      "nbOfSamples": 1,
+      "args": {
+        "value": 0.001
+      }
+    }
+  ]
+}
